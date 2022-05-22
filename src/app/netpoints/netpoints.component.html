@@ -1,0 +1,69 @@
+<div class="card">
+  <form [formGroup]="netPointForm">
+    <div class="mt-5 box">
+      <div class="form-row">
+        <div class="col-md-12">
+          <div class="form-group mt-4">
+            <label>Адрес ТС</label>
+          </div>
+          <div class="form-row">
+            <div class="col">
+              <input type="text"
+                     id="address"
+                     formControlName="address"
+                     class="form-control"
+                     placeholder="г.Самара, Московское шоссе 34а || 54.38564,59.544545"
+                     required>
+            </div>
+            <span class="text-danger" *ngIf="address && address.invalid && (address.dirty || address.touched)">
+              * - поле обязательно для заполнения
+            </span>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="form-group mt-4">
+            <label>Код ТС</label>
+          </div>
+          <div class="form-row">
+            <div class="col">
+              <input type="text"
+                     id="code"
+                     formControlName="code"
+                     class="form-control"
+                     placeholder="Университет"
+                     required>
+            </div>
+            <span class="text-danger" *ngIf="code && code.invalid && (code.dirty ||code.touched) ">
+              * - поле обязательно для заполнения
+            </span>
+          </div>
+        </div>
+
+        <div class="form-row mt-4">
+          <div class="col-md-6">
+            <button type="button" class="custom-button" (click)="addNetPoint()">Добавить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <div class="col-md-8 mt-2 mb-4" id="table-container">
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th class="table-primary" style="width: 50%">Адрес ТС</th>
+        <th class="table-primary" style="width: 30%">Код ТС</th>
+        <th class="table-primary" style="width: 20%"></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let netPoint of listNetPoints">
+        <td><span>{{netPoint.address}}</span></td>
+        <td><span>{{netPoint.code}}</span></td>
+        <td><button type="button" class="btn btn-primary" (click)="removeNetPoint(netPoint)">Удалить</button></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
