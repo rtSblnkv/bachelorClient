@@ -1,0 +1,61 @@
+.filters{
+  margin-top: 20px;
+  display:inline-grid;
+}
+.filter_buttons{
+  display: inline-block;
+}
+
+.box{
+  padding-left: 1px;
+}
+
+.form-row{
+  padding-right: 80px;
+  margin:10px;
+  width:100%;
+}
+
+.col{
+  width:100%;
+}
+.select-vehicle{
+  font-size:medium;
+  font-weight:700;
+  padding: 10px;
+  border: solid 1px black;
+  outline: 0;
+  background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #CAD9E3), to(#D0F4EA));
+  background: -moz-linear-gradient(top, #FFFFFF, #CAD9E3 1px, #FFFFFF 25px);
+  box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+  -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+  -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+  width:max-content;
+}
+
+#filter_branch, #filter_color {
+  font-size:medium;
+  font-weight:700;
+  padding: 10px;
+  margin:10px;
+  border: solid 1px black;
+  outline: 0;
+  background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #CAD9E3), to(#D0F4EA));
+  background: -moz-linear-gradient(top, #FFFFFF, #CAD9E3 1px, #FFFFFF 25px);
+  box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+  -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+  -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+  width:max-content;
+}
+.custom-button{
+  padding: 13px 13px 13px 13px;
+  margin:10px;
+  font-size: 12px;
+  font-weight:800;
+  border-radius:5px;
+  text-align: center;
+  background-color: #E8FCC2;
+}
+
+
+

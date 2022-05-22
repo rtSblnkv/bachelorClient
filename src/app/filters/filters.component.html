@@ -1,0 +1,74 @@
+
+<form [formGroup]="filterForm">
+  <div class="pt-5 box">
+    <label style="padding-left: 10px">Параметры маршрута</label>
+    <div class="form-row">
+        <span class="text-dark">
+          <input type="checkbox" formControlName="withTrafficJamsRouting" id="withTrafficJamsRouting" class="form-check-input">
+            Учёт пробок
+        </span>
+    </div>
+    <div class="form-row">
+        <span class="text-dark">
+          <input type="checkbox"
+                 formControlName="withOptimizing"
+                 id="withOptimizing"
+                 class="form-check-input"
+                 (change)="optimizingEnable($event)">
+            Оптимизировать маршруты
+        </span>
+      <div class="col" *ngIf="withOptimizing">
+        <div class="form-group">
+          <label>Радиус оптимизации (в метрах)</label>
+        </div>
+        <input type="text"
+               id="optimizingDistance"
+               formControlName="optimizingDistance"
+               class="form-control"
+               placeholder="1000"
+               required>
+        <span class="text-danger" *ngIf="optimizingDistance &&
+                                         optimizingDistance.invalid &&
+                                         (optimizingDistance.dirty || optimizingDistance.touched)">
+              * - поле обязательно для заполнения
+        </span>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group mt-4">
+        <label>Тип передвижения</label>
+      </div>
+      <select
+        class="select-vehicle"
+        formControlName="vehicleType"
+        (change)="changeVehicleType($event)">
+        <option *ngFor="let vehicleType of vehicleTypes" [ngValue] = "vehicleType">
+          {{ vehicleType.name }}
+        </option>
+      </select>
+    </div>
+  </div>
+</form>
+
+<div class="filters">
+  <div class="filter_buttons">
+    <button id="filter_button" class="custom-button">Построить</button>
+    <button id="clear_button" class="custom-button">Очистить</button>
+  </div>
+  <div class="form-group">
+    <label style="padding-left: 10px">Код ТС</label>
+  </div>
+  <select id="filter_branch">
+    <option>Стартовая точка 1</option>
+    <option selected>Стартовая точка 2</option>
+    <option>Стартовая точка 3</option>
+  </select>
+  <div class="form-group">
+    <label style="padding-left: 10px">Цвет маршрута на карте</label>
+  </div>
+  <select id="filter_color">
+    <option value="green" selected>Зелёный</option>
+    <option value="black">Чёрный</option>
+    <option value="red">Красный</option>
+  </select>
+</div>
