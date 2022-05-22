@@ -1,0 +1,27 @@
+
+.container{
+  margin: 0;
+}
+
+.row{
+  --bs-gutter-x:0;
+  flex-wrap: nowrap;
+}
+
+
+.col{
+  margin:0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.custom-button{
+  padding: 13px 13px 13px 13px;
+  margin:10px;
+  font-size: 12px;
+  font-weight:800;
+  border-radius:5px;
+  text-align: center;
+  background-color: #E8FCC2;
+}
+

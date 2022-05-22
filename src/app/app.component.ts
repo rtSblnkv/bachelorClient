@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {Order} from "./model/Order";
+import {NetPoint} from "./model/NetPoint";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'BachelorClient';
+
+  netPoints: NetPoint[] = [];
+  orders: Order[] = [];
+
 }
