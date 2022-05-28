@@ -8,11 +8,11 @@
   flex-wrap: nowrap;
 }
 
-
 .col{
   margin:0;
   padding-right: 0;
   padding-left: 0;
+  width:100%;
 }
 
 .custom-button{
@@ -24,4 +24,43 @@
   text-align: center;
   background-color: #E8FCC2;
 }
+
+.box{
+  margin-left: 30px;
+  width:max-content;
+  padding: 0 20px 20px 20px;
+}
+.form-row{
+  padding-right: 80px;
+  margin-top:10px;
+  width:100%;
+}
+
+.col input{
+  min-width: 400px;
+}
+
+#table-container{
+  width:100%;
+}
+
+table{
+  width:100%;
+}
+
+select {
+  padding: 10px;
+  outline: 0;
+  box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+  -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+  -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+  min-width: 400px;
+}
+
+#map {
+  height: 2080px;
+}
+
+
+
 

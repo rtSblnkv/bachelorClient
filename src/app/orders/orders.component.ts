@@ -25,7 +25,7 @@ export class OrdersComponent implements OnInit {
   }
 
   changeNetPoint(e: any){
-    this.netPoint?.setValue(e.target.value,{
+    this.netPointCode?.setValue(e.target.value,{
       onlySelf:true,
     })
   }
@@ -48,8 +48,8 @@ export class OrdersComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  get address() { return this.orderForm.get('address'); }
+  get orderAddress() { return this.orderForm.get('address'); }
 
-  get netPoint(){ return this.orderForm.get('netPoint');}
+  get netPointCode(){ return this.orderForm.get('netPoint');}
 
 }

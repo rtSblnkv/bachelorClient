@@ -1,6 +1,6 @@
-
-
 export interface NetPoint {
   address: string;
-  code: string;
+  branchCode: string;
+  latitude: number;
+  longitude: number;
 }

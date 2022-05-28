@@ -12,15 +12,14 @@ export class MapComponent implements AfterViewInit {
 
 
   private initMap(): void {
-     this.map = L.map('map').setView([-37.7738026,144.9836466], 13);
+     this.map = L.map('map').setView([53.211772885475156, 50.17729037818708], 13);
     L.tileLayer('https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png', {
       maxZoom: 18,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(this.map);
 
-    L.marker([-37.7738026,144.9836466]).addTo(this.map);
-    L.marker([-37.8618349,144.905716]).addTo(this.map);
-    L.marker([-37.8158343,145.04645]).addTo(this.map);
+    L.marker([53.211772885475156, 50.17729037818708]).addTo(this.map);
+    L.marker([53.201107707748605, 50.10843173214648]).addTo(this.map);
   }
 
   constructor() {

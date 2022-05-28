@@ -1,4 +1,3 @@
-
 <form [formGroup]="filterForm">
   <div class="pt-5 box">
     <label style="padding-left: 10px">Параметры маршрута</label>
@@ -15,11 +14,11 @@
                  id="withOptimizing"
                  class="form-check-input"
                  (change)="optimizingEnable($event)">
-            Оптимизировать маршруты
+            Объединять маршруты
         </span>
       <div class="col" *ngIf="withOptimizing">
         <div class="form-group">
-          <label>Радиус оптимизации (в метрах)</label>
+          <label>Радиус объединения (в метрах)</label>
         </div>
         <input type="text"
                id="optimizingDistance"
@@ -56,19 +55,19 @@
     <button id="clear_button" class="custom-button">Очистить</button>
   </div>
   <div class="form-group">
-    <label style="padding-left: 10px">Код ТС</label>
+    <label style="padding-left: 10px">Код стартовой точки</label>
   </div>
   <select id="filter_branch">
     <option>Стартовая точка 1</option>
     <option selected>Стартовая точка 2</option>
     <option>Стартовая точка 3</option>
   </select>
-  <div class="form-group">
-    <label style="padding-left: 10px">Цвет маршрута на карте</label>
-  </div>
-  <select id="filter_color">
-    <option value="green" selected>Зелёный</option>
-    <option value="black">Чёрный</option>
-    <option value="red">Красный</option>
-  </select>
+<!--  <div class="form-group">-->
+<!--    <label style="padding-left: 10px">Цвет маршрута на карте</label>-->
+<!--  </div>-->
+<!--  <select id="filter_color">-->
+<!--    <option value="green" selected>Зелёный</option>-->
+<!--    <option value="black">Чёрный</option>-->
+<!--    <option value="red">Красный</option>-->
+<!--  </select>-->
 </div>
